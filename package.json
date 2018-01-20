@@ -1,0 +1,11 @@
+{
+  "name": "ciesese",
+  "version": "1.0.0",
+  "description": "A landing pag for CIESESE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabian Velez",
+  "license": "ISC"
+}

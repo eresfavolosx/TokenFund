@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="theme-color" content="#2979FF" />
+  <link rel="icon" href="Assets\IMG\token-fund-02.png">
+
+
+  <title>TokenFund</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-deep_orange.min.css" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="Assets\CSS\style.css" />
+
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#007AFC" />
+  <meta name="msapplication-TileImage" content="Assets\IMG\token-fund-01.png" />
+  <meta name="msapplication-square70x70logo" content="Assets\IMG\token-fund-01.png" />
+  <meta name="msapplication-square150x150logo" content="Assets\IMG\token-fund-01.png" />
+  <meta name="msapplication-wide310x150logo" content="Assets\IMG\token-fund-01.png" />
+  <meta name="msapplication-square310x310logo" content="Assets\IMG\token-fund-01.png" />
+
+
+
+
+</head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111738091-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111738091-1');
+</script>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<body>
+
+
+
+  <script>
+    $(document).ready(function() {
+      function close() {
+        var d = document.querySelector('.mdl-layout');
+        d.MaterialLayout.toggleDrawer();
+      }
+
+      document.querySelector('.mdl-layout__drawer').addEventListener('click', close);
+
+      $(function() {
+        $('category-button').click();
+      });
+
+      $('.maps').click(function() {
+        $('.maps iframe').css("pointer-events", "auto");
+      });
+
+      $(".maps").mouseleave(function() {
+        $('.maps iframe').css("pointer-events", "none");
+      });
+      // Document ready shorthand statement
+      $(function() {
+        // Select link by id and add click event
+        $('#down1').click(function() {
+
+          // Animate Scroll to #bottom
+          $('html,body').animate({
+              scrollTop: $("#bottom").offset().top
+            }, // Tell it to scroll to the top #bottom
+            '1000' // How long scroll will take in milliseconds
+          );
+
+          // Prevent default behavior of link
+          return false;
+        });
+      });
+      $(document).singlePageNav({
+        filter: ':not(.external)'
+      });
+
+      $("#menu-speed").trigger('click');
+
+
+
+    });
+  </script>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5a3fa4afbbdfe97b137fd1d2/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+  <!-- Navigation -->
+  <!-- Simple header with scrollable tabs. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title"><a href="index.html"><img id="logo" class="navLogo" data-src="lazy.jpg" src="Assets\IMG\token-fund-01.png"></a>
+      </span>
+        <a href="index.html">
+          <p class="navBar">Token<span class="navBarColor">Fund</span></p>
+        </a>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="#Home">Home</a>
+          <a class="mdl-navigation__link" href="#ourProgress">Our Progress</a>
+          <!-- <a class="mdl-navigation__link" href="">Prizes</a> -->
+          <a class="mdl-navigation__link" href="#whyDonate">Why Donate ?</a>
+          <a class="mdl-navigation__link" href="#Partners">Partners</a>
+          <a class="mdl-navigation__link" href="#whyBitcoin">Why Bitcoin ?</a>
+          <a class="mdl-navigation__link" href="#aboutUs">About Us</a>
+          <a class="mdl-navigation__link" href="#contactUs">Contact Us</a>
+
+
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+      <span class="mdl-layout-title nav-logo2"><img data-src="lazy.jpg" id="logoNav" src="Assets\IMG\token-fund-01.png"></span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#Home"><i class="material-icons home2">home</i>Home</a>
+        <a class="mdl-navigation__link" href="#ourProgress"><i class="material-icons home2">arrow_upward</i>Our Progress</a>
+        <!-- <a class="mdl-navigation__link" href="">Prizes</a> -->
+        <a class="mdl-navigation__link" href="#whyDonate"><i class="material-icons home2">attach_money</i>Why Donate?</a>
+        <a class="mdl-navigation__link" href="#Partners"><i class="material-icons home2">people</i>Partners</a>
+        <a class="mdl-navigation__link" href="#whyBitcoin"><i class="material-icons home2">help</i>Why Bitcoin ?</a>
+        <a class="mdl-navigation__link" href="#aboutUs"><i class="material-icons home2">contacts</i>About Us</a>
+        <a class="mdl-navigation__link" href="#contactUs"><i class="material-icons home2">contact_mail</i>Contact Us</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <!-- Your content goes here -->
+
+        <div class="containerHeader" id="Home">
+          <div class="row headerRow">
+            <div class="col-md-12 carouselPadding">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="Assets\IMG\header.jpg" alt="First slide" class="carouselImage">
+                    <div class="carousel-caption">
+                      <!-- <div class="row">
+                        <div class="col-xs-12">
+                          <h1 class="sectionHeader4">Help Rebuild <span class="headerHighlight">Puerto Rico</span> </h1>
+                          <h2 class="sectionHeader5">Bitcoin Fund</h2>
+                          <div class="centerItem">
+                            <div class="row buttonRow">
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="containerButton">
+                                  <button class="mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect" data-toggle="modal" data-target="#exampleModal">
+                                                      Donate Now
+                                                  </button>
+
+                                </div>
+
+                              </div>
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="containerButton">
+                                  <button class="secondaryButton mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect" data-toggle="modal" data-target="#exampleModal">
+                                                  View Gallery
+                                                </button>
+                                </div>
+
+                              </div>
+
+                            </div>
+                          </div>
+
+
+                        </div>
+                        <p class="creditText">Picture Credit: Ricardo Ardengo / AFP </p>
+                      </div> -->
+
+
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img class="carouselImage" src="Assets\IMG\171020142325-puerto-rico-damage-0928-1280x720-min.jpg">
+                    <div class="carousel-caption">
+                      <!-- <div class="row">
+                        <div class="col-xs-12">
+                          <h1 class="sectionHeader4">Help Rebuild <span class="headerHighlight">Puerto Rico</span> </h1>
+                          <h2 class="sectionHeader5">Bitcoin Fund</h2>
+                          <div class="centerItem">
+                            <div class="row buttonRow">
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="containerButton">
+                                  <button class="mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect" data-toggle="modal" data-target="#exampleModal">
+                                                      Donate Now
+                                                  </button>
+
+                                </div>
+
+                              </div>
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="containerButton">
+                                  <button class="secondaryButton mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect" data-toggle="modal" data-target="#exampleModal">
+                                                  View Gallery
+                                                </button>
+                                </div>
+
+                              </div>
+
+                            </div>
+                          </div>
+
+
+                        </div>
+                        <p class="creditText">Picture Credit: Ricardo Ardengo / AFP </p>
+                      </div> -->
+
+
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img class="carouselImage" src="Assets\IMG\ricardoarduengo.jpg" alt="Third slide">
+                    <div class="carousel-caption">
+                      <!-- <div class="row">
+                        <div class="col-xs-12">
+                          <h1 class="sectionHeader4">Help Rebuild <span class="headerHighlight">Puerto Rico</span> </h1>
+                          <h2 class="sectionHeader5">Bitcoin Fund</h2>
+                          <div class="centerItem">
+                            <div class="row buttonRow">
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="containerButton">
+                                  <button class="mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect" data-toggle="modal" data-target="#exampleModal">
+                                                      Donate Now
+                                                  </button>
+
+                                </div>
+
+                              </div>
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="containerButton">
+                                  <button class="secondaryButton mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect" data-toggle="modal" data-target="#exampleModal">
+                                                  View Gallery
+                                                </button>
+                                </div>
+
+                              </div>
+
+                            </div>
+                          </div>
+
+
+                        </div>
+                        <p class="creditText">Picture Credit: Ricardo Ardengo / AFP </p>
+                      </div> -->
+
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="paddingSection paddingSectionHeader">
+                <div class="containerBody">
+                  <div class="main-text ">
+                    <div class="col-md-12 text-center marginHeader">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <h1 class="sectionHeader4">Help Rebuild <span class="headerHighlight">Puerto Rico</span> </h1>
+                          <h2 class="sectionHeader5">Bitcoin Fund</h2>
+                          <div class="centerItem">
+                            <div class="row buttonRow">
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="containerButton">
+                                  <button class="mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect" data-toggle="modal" data-target="#exampleModal">
+                                                  Donate Now
+                                              </button>
+
+                                </div>
+
+                              </div>
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="containerButton">
+                                  <a href="https://photos.app.goo.gl/wPhk35Bo3dmAxHaq1" target="_blank"><button class="secondaryButton mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect" >
+                                              View Gallery
+                                            </button></a>
+                                </div>
+
+                              </div>
+
+                            </div>
+                          </div>
+
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="creditText">Picture Credit: Ricardo Arduengo / AFP, Gerald Herbert AP, Ricardo Arduengo </p>
+        <!-- <div class="container-fluid containerHeader" id="Home">
+          <div class="frontColor">
+            <div class="paddingSection">
+              <div class="containerBody">
+
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h1 class="sectionHeader4">Help Rebuild <span class="headerHighlight">Puerto Rico</span> </h1>
+                    <h2 class="sectionHeader5">Bitcoin Fund</h2>
+                    <div class="centerItem">
+                      <div class="row buttonRow">
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="containerButton">
+                            <button class="mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect" data-toggle="modal" data-target="#exampleModal">
+                                                Donate Now
+                                            </button>
+
+                          </div>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                          <div class="containerButton">
+                            <button class="secondaryButton mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect" data-toggle="modal" data-target="#exampleModal">
+                                            View Gallery
+                                          </button>
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <p class="creditText">Picture Credit: Ricardo Ardengo / AFP </p>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+
+        </div> -->
+
+        <section class="color3" id="ourProgress">
+          <div class="container-fluid color1">
+            <div class="containerBody">
+              <div class="row">
+                <div class="col-xs-12">
+                  <p class="sectionHeader1">
+                    How are we doing so far ?
+
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid color1">
+            <div class="containerBody">
+              <div class="row">
+
+                <div class="col-md-12 progressBar">
+
+                  <!-- MDL Progress Bar with Buffering -->
+  <div id="p3" class="mdl-progress mdl-js-progress"></div>
+
+                </div>
+
+
+
+              </div>
+
+            </div>
+
+
+          </div>
+          <div class="container-fluid color1">
+            <div class="containerBody">
+              <div class="row">
+
+                <div class="col-md-12">
+                  <p id="walletData">
+                    Loading Data...
+
+
+                  </p>
+                </div>
+
+
+
+              </div>
+
+            </div>
+
+
+          </div>
+          <div class="container-fluid color1">
+            <div class="containerBody">
+              <div class="centerContent">
+
+
+                <div class="row-fluid justify-content-center">
+                  <!-- about module -->
+                  <div class="col-md-4 col-sm-6  col-xs-12 text-center whyMargin">
+                    <div class="mz-module-about">
+                      <i class=""><img data-src="lazy.jpg" src="Assets\IMG\american-dollar.png" alt="" class="listImage"></i>
+                      <h3><img data-src="lazy.jpg" src="" alt="" class="brand-icon categories-images"></h3>
+                      <p class="sectionBody1 whyItems" id="USDData">Loading Data...</p>
+                    </div>
+                  </div>
+                  <!-- end about module -->
+                  <!-- about module -->
+                  <div class="col-md-4 col-sm-6  col-xs-12  text-center whyMargin whyMarginTop">
+                    <div class="mz-module-about">
+                      <i class=""><img  data-src="lazy.jpg" src="Assets\IMG\euro.png" alt="" class="listImage"></i>
+                      <h3><img data-src="lazy.jpg" src="" alt="" class="brand-icon categories-images"></h3>
+                      <p class="sectionBody1 whyItems" id="EURData">Loading Data...</p>
+                    </div>
+                  </div>
+                  <!-- end about module -->
+                  <!-- about module -->
+                  <div class="col-md-4 col-sm-6  col-xs-12  text-center whyMargin whyMarginTop">
+                    <div class="mz-module-about">
+                      <i class=""></i><img data-src="lazy.jpg" src="Assets\IMG\korean-yen.png" alt="" class="listImage"></i>
+                      <h3><img data-src="lazy.jpg" src="" alt="" class="brand-icon categories-images"></h3>
+                      <p class="sectionBody1 whyItems" id="JPYData">Loading Data...</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end about module -->
+
+                <div class="row-fluid justify-content-center">
+                  <!-- about module -->
+                  <div class="col-md-4 col-sm-6  col-xs-12  text-center whyMargin whyMarginTop">
+                    <div class="mz-module-about">
+                      <i class=""><img data-src="lazy.jpg" src="Assets\IMG\pound-sterling.png" alt="" class="listImage"></i>
+                      <h3><img data-src="lazy.jpg" src="" alt="" class="brand-icon categories-images"></h3>
+                      <p class="sectionBody1 whyItems" id="GBPData">Loading Data...</p>
+                    </div>
+                  </div>
+                  <!-- end about module -->
+                  <!-- about module -->
+                  <div class="col-md-4 col-sm-6  col-xs-12 text-center whyMargin whyMarginTop">
+                    <div class="mz-module-about">
+                      <i class=""><img data-src="lazy.jpg" src="Assets\IMG\franco.png" alt="" class="listImage"></i>
+                      <h3><img data-src="lazy.jpg" src="" alt="" class="brand-icon categories-images"></h3>
+                      <p class="sectionBody1 whyItems" id="CHFData">Loading Data...</p>
+                    </div>
+                  </div>
+                  <!-- end about module -->
+                  <!-- about module -->
+                  <div class="col-md-4 col-sm-6 col-xs-12 text-center whyMargin">
+                    <div class="mz-module-about">
+                      <i class=""><img data-src="lazy.jpg" src="Assets\IMG\canadian-dollar.png" alt="" class="listImage"></i>
+                      <h3><img data-src="lazy.jpg" src="" alt="" class="brand-icon categories-images"></h3>
+                      <p class="sectionBody1 whyItems" id="CADData">Loading Data...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="row-fluid justify-content-center">
+                <div class="col-md-4">
+                  <p id="USDData">Loading Data...</p>
+                </div>
+                <div class="col-md-4">
+                  <p id="EURData">Loading Data...</p>
+                </div>
+                <div class="col-md-4">
+                  <p id="JPYData">Loading Data...</p>
+                </div>
+              </div>
+              <div class="row-fluid justify-content-center">
+                <div class="col-md-4">
+                  <p id="GBPData">Loading Data...</p>
+                </div>
+                <div class="col-md-4">
+                  <p id="CHFData">Loading Data...</p>
+                </div>
+                <div class="col-md-4">
+                  <p id="CADData">Loading Data...</p>
+                </div>
+              </div> -->
+
+            </div>
+          </div>
+          <div class="container-fluid">
+
+            <div class="containerBody2">
+              <div class="row">
+
+                <div class="col-xs-12 col-sm-12">
+
+                  <a href="https://live.blockcypher.com/btc/address/1PsA7MX1jDYcTqRTJusLrC4Cds8y5bmWJJ/" target="_blank">
+                  <button class="mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect">
+                                                Learn More
+                                            </button>
+
+                                            </a>
+
+                </div>
+
+
+              </div>
+
+
+
+
+            </div>
+
+
+
+
+          </div>
+
+
+        </section>
+        <section class="section1" id="whyDonate">
+          <div class="container-fluid color1">
+            <div class="containerBody">
+              <div class="row row-eq-height ">
+                <div class="col-xs-12">
+                  <p class="sectionHeader1">
+                    Why Donate ?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid color1">
+            <div class="containerBody whySection">
+              <div class="row row-eq-height align-items-center">
+                <div class="col-xs-12 col-md-6 aboutContainer">
+                  <div class="imageContainer2">
+                    <img data-src="lazy.jpg" src="Assets\IMG\small_maria_gpm_gmi_dpr_20_september_0151_utc_goes-gpm_animated.gif" alt="" class="imageSection mariaImage img-responsive">
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+
+
+
+                  <p class="sectionBody1">
+                    As an effort to help our country rebuild after the devastation caused by Hurricane Maria, we have created this platform to gather funds internationally. We are counting on the cooperation of the people worldwide to help us get through these tough times.
+                  </p>
+                  <p class="sectionBody1">
+                    Hurricane Maria ripped through Puerto Rico on Wednesday, September 20th, making landfall as a powerful Category 4 storm with 155-mph winds, according to the National Hurricane Center, making it the most devastating hurricane that has crossed Puerto Rico
+                    in modern history. It left 100% of the island without power. In many places, there’s still no water to drink or bathe in or to flush toilets. Many people have died, and even more are missing. There are limited food and cell service,
+                    and dozens of remote villages have been completely cut off from everything for weeks. Our island is in desperate need of help. By donating, you'll be contributing to the immediate and long-term relief of Puerto Rico.
+
+
+
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+          <div class="container-fluid color1">
+            <div class="">
+              <div class="centerContent">
+
+
+                <div class="row-fluid justify-content-center">
+                  <!-- about module -->
+                  <div class="col-md-4 col-sm-6  col-xs-12 text-center whyMargin">
+                    <div class="mz-module-about">
+                      <i class=""><img data-src="lazy.jpg" src="Assets\IMG\house.png" alt="" class="listImage"></i>
+                      <h3><img data-src="lazy.jpg" src="" alt="" class="brand-icon categories-images"></h3>
+                      <p class="sectionBody1 whyItems">An estimated 100,000 homes and buildings were demolished in the storm, and 90 percent of the island's infrastructure was damaged or destroyed.</p>
+                    </div>
+                  </div>
+                  <!-- end about module -->
+                  <!-- about module -->
+                  <div class="col-md-4 col-sm-6  col-xs-12  text-center whyMargin whyMarginTop">
+                    <div class="mz-module-about">
+                      <i class=""><img  data-src="lazy.jpg" src="Assets\IMG\user.png" alt="" class="listImage"></i>
+                      <h3><img data-src="lazy.jpg" src="" alt="" class="brand-icon categories-images"></h3>
+                      <p class="sectionBody1 whyItems">
+                        According to Quartz, as of December 24, the death toll stood at 64. About 1,000 more bodies were creamted after the hurricane without verification.</p>
+                    </div>
+                  </div>
+                  <!-- end about module -->
+                  <!-- about module -->
+                  <div class="col-md-4 col-sm-6  col-xs-12  text-center whyMargin whyMarginTop">
+                    <div class="mz-module-about">
+                      <i class=""></i><img data-src="lazy.jpg" src="Assets\IMG\parsley.png" alt="" class="listImage"></i>
+                      <h3><img data-src="lazy.jpg" src="" alt="" class="brand-icon categories-images"></h3>
+                      <p class="sectionBody1 whyItems">Approximately 80 percent of the territory's agriculture was lost due to the hurricane, with agricultural losses estimated at $780 million.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end about module -->
+
+                <div class="row-fluid justify-content-center">
+                  <!-- about module -->
+                  <div class="col-md-4 col-sm-6  col-xs-12  text-center whyMargin whyMarginTop">
+                    <div class="mz-module-about">
+                      <i class=""><img data-src="lazy.jpg" src="Assets\IMG\idea.png" alt="" class="listImage"></i>
+                      <h3><img data-src="lazy.jpg" src="" alt="" class="brand-icon categories-images"></h3>
+                      <p class="sectionBody1 whyItems">The hurricane completely destroyed the island's power grid, leaving all 3.4 million residents of the island without electricity.</p>
+                    </div>
+                  </div>
+                  <!-- end about module -->
+                  <!-- about module -->
+                  <div class="col-md-4 col-sm-6  col-xs-12 text-center whyMargin whyMarginTop">
+                    <div class="mz-module-about">
+                      <i class=""><img data-src="lazy.jpg" src="Assets\IMG\coin.png" alt="" class="listImage"></i>
+                      <h3><img data-src="lazy.jpg" src="" alt="" class="brand-icon categories-images"></h3>
+                      <p class="sectionBody1 whyItems">Moody’s Analytics, a financial services firm, estimates the hurricane could cost Puerto Rico $45 billion to $90 billion.</p>
+                    </div>
+                  </div>
+                  <!-- end about module -->
+                  <!-- about module -->
+                  <div class="col-md-4 col-sm-6 col-xs-12 text-center whyMargin">
+                    <div class="mz-module-about">
+                      <i class=""><img data-src="lazy.jpg" src="Assets\IMG\phone-call.png" alt="" class="listImage"></i>
+                      <h3><img data-src="lazy.jpg" src="" alt="" class="brand-icon categories-images"></h3>
+                      <p class="sectionBody1 whyItems">The island’s communications infrastructure was badly damaged, leaving Puerto Rico and its residents almost entirely disconected from each other and the rest of the world.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </section>
+        <section class="color2" id="Partners">
+          <div class="frontColor2">
+            <div class="paddingSection">
+
+
+              <div class="containerBody">
+
+                <div class="containerInternship">
+                  <div class="row sectionWidth">
+                    <div class="col-xs-12">
+                      <p class="sectionHeader2">
+                        Where is the money going ?
+                      </p>
+
+                      <p class="sectionBody2">
+
+                        We have partnered with the most trustworthy and recognizable non-profit organizations dedicated to the immediate and long term relief efforts in Puerto Rico. Here is a list of the organizations we are currently working with:
+
+                      </p>
+                    </div>
+                  </div>
+
+
+
+
+
+                  <div class="row rowMargin2">
+
+                    <div class="col-xs-12 col-sm-6 col-lg-6 internContainer">
+
+
+                      <!-- Square card -->
+
+
+                      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdlCardTitle1 mdl-card--expand aboutCard1">
+                          <h2 class="mdl-card__title-text ">ConPRmetidos </h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                          ConPRmetidos mission is to connect people to foster a commitment to the personal, social, and economic development of Puerto Rican communities, wherever they are. As one of the leading independent, non-partisan, non-profit economic empowerment NGOs in
+                          the island, no other time has our mission been so relevant. Please help us help power up Puerto Rico.
+
+
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                          <div class="row rowFull">
+
+                            <div class="buttonColumn">
+
+                              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdlCardButton mainButton" id="demo-show-toast" href="http://www.conprmetidos.org" target="_blank">
+                                                            Learn More
+                                                        </a>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+                      <div class="mdl-snackbar__text"></div>
+                      <button class="mdl-snackbar__action" type="button">
+
+                      </button>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-lg-6 internContainer">
+
+                      <!-- Square card -->
+
+
+                      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand aboutCard2">
+                          <h2 class="mdl-card__title-text aboutCard2">Foundation for Puerto Rico </h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                          Foundation for Puerto Rico is a 501(c)(3) non-profit organization whose mission is to transform Puerto Rico into a destination for the world by driving economic and social development through sustainable strategies.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                          <div class="row rowFull">
+
+                            <div class="buttonColumn">
+
+                              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdlCardButton mainButton" id="demo-show-toast" href="https://www.foundationforpuertorico.org/" target="_blank">
+                                                            Learn More
+                                                        </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+                      <div class="mdl-snackbar__text"></div>
+                      <button class="mdl-snackbar__action" type="button"></button>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-lg-6 internContainer">
+
+                      <!-- Square card -->
+
+
+                      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand aboutCard3">
+                          <h2 class="mdl-card__title-text ">Flamboyan Foundation </h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                          Flamboyan and its founders have been working in Puerto Rico with nonprofit organizations, government agencies, media outlets, philanthropists, and businesses for over 25 years. They have partnered with teams on the island to support the immediate humanitarian
+                          and recovery efforts critical for the people of Puerto Rico. In the long-term, they remain committed to ensuring the island’s children thrive by advocating for, supporting, and restoring the island’s educational systems.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                          <div class="row rowFull">
+
+                            <div class="buttonColumn">
+
+                              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdlCardButton mainButton" id="demo-show-toast" href="http://flamboyanfoundation.org/" target="_blank">
+                                                            Learn More
+                                                        </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-lg-6 internContainer">
+
+                      <!-- Square card -->
+
+
+                      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand aboutCard4">
+                          <h2 class="mdl-card__title-text ">Power4PR </h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                          Power4PR's mission is to provide power and lights to help families in the dark during this black out period. For every donation received, disposable chargers and lanterns will be provided to give Puerto Rico provisional lighting and power to charge their
+                          phones in order for them to be able to stay connected with their families and friends and operate in the darkness. For every product purchased, we will match and donate the same to Puerto Rico.
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                          <div class="row rowFull">
+
+                            <div class="buttonColumn">
+
+                              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdlCardButton mainButton" id="demo-show-toast" href="http://pwr4pr.com/" target="_blank">
+                                                            Learn More
+                                                        </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                  <div class="row sectionWidth7">
+                    <div class="col-xs-12">
+                      <h3 class="sectionHeader7 textAlign">
+                                          "This is a non-profit effort. Which means that all of the Bitcoin donated right down to the last Satoshi will go torwards the organizations mentioned above."
+                                        </h3>
+
+
+                    </div>
+                  </div>
+
+
+
+                  <div class="container-fluid">
+
+                    <div class="containerBody2">
+                      <div class="row">
+
+                        <div class="col-xs-12 col-sm-12">
+
+                          <button class="mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect" data-toggle="modal" data-target="#exampleModal">
+                                                        Donate Now
+                                                    </button>
+
+
+
+                          <!-- Modal -->
+
+                        </div>
+
+
+                      </div>
+
+
+
+
+                    </div>
+
+
+
+
+                  </div>
+
+
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+          </div>
+
+      </div>
+
+
+      </section>
+
+      <section class="section1" id="whyBitcoin">
+
+
+
+
+
+        <div class="container-fluid color1">
+          <div class="containerBody">
+            <div class="row row-eq-height ">
+              <div class="col-xs-12">
+                <p class="sectionHeader1">
+                  Why Bitcoin ?
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid color1">
+          <div class="containerBody">
+            <div class="row row-eq-height">
+              <div class="containerFlex">
+
+
+                <div class="col-xs-12 col-md-6 aboutContainer ">
+
+                  <div class="imageContainer2">
+
+
+
+                    <img data-src="lazy.jpg" src="Assets\IMG\opengraph.png" class="imageSection1 mariaImage img-responsive">
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12 ">
+
+
+
+                  <p class="sectionBody1">
+                    We believe thay on events as damaging as the one that Puerto Rico has recently suffered, we must find as many ways possible to bring funds for aid to our country. In order to do that, we must reach the entire world for help. Bitcoin and the blockchain
+                    offer great advantages for running an international crowdfunding effort such as this one. Some of those advantages are:
+                  </p>
+                  <p class="sectionBody1">
+                    <ul class="biggerText">
+                      <li class="listSpace"><span class="hightlight">Transparency: </span> Cryptocurrencies like Bitcoin operate in an open ledger, which is to say, every Bitcoin transaction ever can be seen by anyone. This means that every donor can be sure that their money
+                        is going to the right place and being used responsibly.</li>
+                      <li class="listSpace"><span class="hightlight">Fees: </span> Another benefit of running a crowdfunding effort with Bitcoin is its low overhead. Unlike traditional banking and online payment systems, which can charge quite a high transaction, platform and
+                        currency exchange fees, Bitcoin allows transactions globally with very little cost. This means that more of your donation will actually reach the intended recipient
+                      </li>
+                      <li class="listSpace"><span class="hightlight">Accesibility: </span> ​While traditional crowdfunding platforms may carry out disbursement cycles of up to weeks at a time, desperately needed funds might not make it to the recipients quickly enough. Fortunately,
+                        funds transferred on the blockchain are immediately accessible no matter how far they were transferred from.</li>
+                      <li class="listSpace"><span class="hightlight">Growing User Base: </span> Thanks to the growing adoption of Bitcoin worldwide, we see a great opportunity to further expand the areas in which its core features can present a direct and immediate impact
+                        on the world. We believe this is a great application for the technology and we make a request to the Bitcoin society to help our country recover and rebuild. ​
+                      </li>
+                    </ul>
+
+
+
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+      </section>
+
+      <section class="color3" id="aboutUs">
+
+
+        <div class="container-fluid">
+          <div class="containerBody">
+            <div class="row">
+              <div class="col-sm-12">
+                <p class="sectionHeader1">
+                  Meet the TokenFund Team
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="containerBody ">
+            <div class="row">
+
+              <div class="col-xs-12 col-sm-6 aboutMargin">
+
+                <div class="row">
+                  <div class="col-md-12 col-lg-4 ">
+                    <a href="https://www.linkedin.com/in/guillermo-aviles-70510990/" target="_blank">
+                    <img data-src="lazy.jpg" src="Assets\IMG\Guille pic.jpg" alt="" class="roundedImage socialImage">
+                    </a>
+                  </div>
+                  <div class="col-md-12 col-lg-8 ">
+                    <p class="aboutDescription"><a href="https://www.linkedin.com/in/guillermo-aviles-70510990/" target="_blank" class="socialLink"><span class="aboutHeader socialText">Guillermo Aviles, President/Co-Founder</span></a><br> ​ Guillermo is an Aerospace Engineering
+                      student at the Polytechnic University of Puerto Rico, an entrepeneur and evangelist for the blockchain technology. He is also the president of AEROPOD, a UAV aerial services company. AEROPOD has been involved with leveraging drone
+                      technology for aid in Puerto Rico after Hurricane María.
+                    </p>
+                  </div>
+                </div>
+
+
+
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <div class="col-md-12 col-lg-4">
+                  <a href="https://www.linkedin.com/in/fabi%C3%A1n-v%C3%A9lez-vicente-66a046125/" target="_blank">
+                  <img data-src="lazy.jpg" src="Assets\IMG\download.png" alt="" class="roundedImage socialImage">
+                </a>
+                </div>
+                <div class="col-md-12 col-lg-8 ">
+                  <p class="aboutDescription"><a href="https://www.linkedin.com/in/fabi%C3%A1n-v%C3%A9lez-vicente-66a046125/" target="_blank"><span class="aboutHeader socialText">Fabián Vélez, Developer/Co-Founder</span></a><br> ​ Fabián is a Computer Engineering student at Universidad
+                    Del Turabo. He fuses his extensive knowledge in UI design, UX design, front-end web development and business to excel at designing and developing production level web experiences, software, business models and marketing strategies.
+
+                  </p>
+                </div>
+
+
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+        <div class="container-fluid">
+          <div class="containerBody2">
+            <div class="row">
+
+              <div class="col-xs-12 col-sm-12">
+
+                <div class="row">
+                  <div class="col-md-12 col-lg-4">
+                    <a href="https://www.linkedin.com/in/paulmcneal/" target="_blank">
+                    <img data-src="lazy.jpg" src="Assets\IMG\paul.jpg" alt="" class="roundedImage socialImage">
+                  </a>
+                  </div>
+                  <div class="col-md-12 col-lg-8 ">
+                    <p class="aboutDescription"><a href="https://www.linkedin.com/in/guillermo-aviles-70510990/" target="_blank"><span class="aboutHeader socialText">Paul McNeal, Advisor</span></a><br>Paul spent the earlier part of his career serving in the United States Navy Submarine
+                      Force working in communications. Held leadership positions at the Defense Threat Reduction Agency (DTRA). Co-founded several startups in the communications and IT space. He is a Bitcoin Evangelist for The Sturgeon Group and helps
+                      businesses and individuals understand and leverage the power of Crypto Currencies.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+
+
+
+
+          </div>
+
+
+
+
+        </div>
+
+        <div class="container-fluid">
+          <div class="containerBody2">
+            <div class="row">
+
+              <div class="col-xs-12 col-sm-12">
+
+                <button class="mdl-button mdl-button-raised mdl-js-button mdl-button--raised mdl-button--colore applyButton mdl-js-ripple-effect" data-toggle="modal" data-target="#exampleModal">
+                                      Donate Now
+                                  </button>
+
+                <!-- Modal -->
+
+              </div>
+
+
+            </div>
+
+
+
+
+          </div>
+
+
+
+
+        </div>
+
+
+
+        <!-- <p class="creditText2">Picture Credit: Andrés Kudacki </p> -->
+      </section>
+
+
+
+
+
+      <section class="section3" id="contactUs">
+        <div class="container-fluid color1">
+          <div class="containerBody">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="sectionHeader3">
+                  Contact Us
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dark-bg section5">
+        <div class="center-content">
+          <div class="row last-row">
+
+
+
+
+            <div class="col-sm-12 col-md-4 justifyText bottomMargin">
+              <div class="section-text centerItem">
+                <div class="">
+                  <h4 class="aboutHeader">We would love to hear from you!</h4>
+                  <p class="aboutDescription"><i class="material-icons footerIcons">place</i>San Juan, Puerto Rico</p>
+                  <p class="aboutDescription"><i class="material-icons footerIcons">call</i> +1 (787)648-6284</p>
+                  <p class="aboutDescription"><i class="material-icons footerIcons">call</i> +1 (939)265-2855</p>
+                  <p class="aboutDescription"><i class="material-icons mailPadding footerIcons">mail</i> tokenfund.info@gmail.com
+
+                  </p>
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4 justifyText">
+              <div class="centerItem">
+                <div class="row socialRow">
+                  <div class="col-md-4 col-xs-4">
+                    <div class="imageContainer2">
+                      <a href="https://www.facebook.com/TokenFundOfficial/" target="_blank"><img data-src="lazy.jpg" class="socialIcons" src="\Assets\IMG\Social\036-facebook.png" alt=""></a>
+                    </div>
+
+                  </div>
+                  <div class="col-md-4 col-xs-4">
+                    <div class="imageContainer2">
+                      <a href=" https://twitter.com/token_fund" target="_blank"><img data-src="lazy.jpg" class="socialIcons" src="Assets\IMG\Social\008-twitter.png" alt=""></a>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-xs-4">
+                    <div class="imageContainer2">
+                      <a href="https://www.instagram.com/tokenfund/" target="_blank"><img data-src="lazy.jpg" class="socialIcons" src="Assets\IMG\Social\029-instagram.png" alt=""></a>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+            </div>
+            <div class="col-sm-12 col-md-4 CIESESEContainer">
+              <div class="CIESESEContainer">
+                <img data-src="lazy.jpg" src="Assets\IMG\token-fund-01.png" alt="" class="lastCIESESE">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="bottomText">Social Icons Designed by Freepik from Flaticon</p>
+      </section>
+
+
+
+
+
+
+      <!-- Modal -->
+
+
+
+
+  </div>
+  </main>
+
+
+
+  </div>
+
+  <!-- <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        Modal Content
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Application for Internship:</h4>
+            </div>
+            <div class="modal-body">
+                <iframe height="818" allowTransparency="true" frameborder="0" scrolling="yes" class="form" style="width:100%;border:none" src="https://universidadturabo.wufoo.com/embed/z1ityc5t06r140w/"><a href="https://universidadturabo.wufoo.com/forms/z1ityc5t06r140w/">Fill out my Wufoo form!</a></iframe>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="mdl-button  mdl-js-button mdl-js-ripple-effect" data-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title modalFont" id="exampleModalLabel">Thank You For Donating!</h5>
+
+        </div>
+        <div class="modal-body">
+          <div class="modalContent">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 center">
+                <img src="//chart.googleapis.com/chart?cht=qr&amp;chl=bitcoin%3A1PsA7MX1jDYcTqRTJusLrC4Cds8y5bmWJJ&amp;choe=UTF-8&amp;chs=300x300" alt="" class="qrImage img-responsive">
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 center">
+                <p class="sectionBody1 moreSize">1PsA7MX1jDYcTqRTJusLrC4Cds8y5bmWJJ</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdlCardButton secondaryButton mainButton" id="demo-show-toast" href="http://www.conprmetidos.org" data-upgraded=",MaterialButton,MaterialRipple" data-dismiss="modal">
+                                                            Done
+                                                        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<script type="text/javascript" src="Assets\JS\script.js"></script>
+
+
+<!-- Icon Royalties
+
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+<a href="https://icons8.com/web-app/8818/Facebook-Filled">Facebook filled and other icons by Icons8</a>
+<a href="https://icons8.com/web-app/5707/twitter"></a> -->
+<!--
+light
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+Telephone
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+Health
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+Water
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+House
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+Bitcoins
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+
+</html>
