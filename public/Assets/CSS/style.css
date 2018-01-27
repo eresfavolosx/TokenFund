@@ -37,9 +37,7 @@ body {
   text-align: center!important;
 }
 
-.socialImage:active, .socialImage:hover {
-  filter: brightness(50%) !important;
-}
+
 
 @media screen and (max-width: 1024px) {
   .mdl-layout__header .mdl-layout__drawer-button {
@@ -183,7 +181,7 @@ a {
   max-width: none;
   min-width: 100vw;
   object-fit: cover;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 /*@media (max-width: 608px){
@@ -659,6 +657,7 @@ section {
 
 .dark-bg .section-text h4 {
   color: #FFFFFF;
+  font-size: 25px !important;
 }
 
 .dark-bg {
@@ -815,29 +814,29 @@ footer p {
 
 .progressBar {
   align-items: center;
-justify-content: center;
-display: flex;
-margin-bottom: 20px;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .mdl-progress>.bufferbar {
-    background-image: linear-gradient(to right,rgba(41, 121, 255, 1),rgba(69, 173, 86, 1)),linear-gradient(to right,rgb(),rgb(96,125,139)) !important;
-    z-index: 0;
-    left: 0;
+  background-image: linear-gradient(to right, rgba(41, 121, 255, 1), rgba(69, 173, 86, 1)), linear-gradient(to right, rgb(), rgb(96, 125, 139)) !important;
+  z-index: 0;
+  left: 0;
 }
 
 .mdl-progress>.progressbar {
-    background: linear-gradient( to right, rgba(41, 121, 255, 0.7), rgba(69, 173, 86, 0.7));
-    z-index: 1;
-    left: 0;
+  background: linear-gradient( to right, rgba(41, 121, 255, 0.7), rgba(69, 173, 86, 0.7));
+  z-index: 1;
+  left: 0;
 }
 
 .mdl-progress {
-    display: block;
-    position: relative;
-    height: 15px;
-    width: 500px;
-    max-width: 100%;
+  display: block;
+  position: relative;
+  height: 15px;
+  width: 500px;
+  max-width: 100%;
 }
 
 #myVideo {
@@ -986,7 +985,7 @@ margin-bottom: 20px;
   margin-bottom: 80px;
   color: #45ad56;
   text-align: center;
-line-height: 46px;
+  line-height: 46px;
 }
 
 .footerIcons {
@@ -1221,6 +1220,22 @@ iframe {}
   height: 100%;
 }
 
+@media (max-width: 756px) {
+  .modalContent {
+    width: 100vw;
+    height: 100%;
+  }
+}
+
+@media (max-width: 756px) {
+  .modal-dialog {
+    padding: 0 !important;
+    margin: 0;
+  }
+}
+
+.modal-header {}
+
 .center {
   display: flex;
   justify-content: center;
@@ -1253,8 +1268,24 @@ body.modal-open {
 }*/
 
 .aboutHeader {
-  font-size: 23.88px;
-  font-weight: bold;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: left;
+      margin-bottom: 12px;
+}
+
+.paragraphFAQ {
+  margin-bottom: 40px;
+  color: black;
+  font-size: 17px;
+  font-weight: 300;
+  font-style: 300;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.paragraphFAQLast {
+  margin-bottom: 0 !important;
 }
 
 .mdlCardButton {
@@ -1348,8 +1379,31 @@ a:focus, a:hover {
   height: auto;
 }
 
-.socialIcons:hover, .socialIcons:active {
+.socialIcons:active {
   opacity: 0.5 !important;
+}
+
+.socialImage:hover {
+  position: relative;
+  filter: brightness(50%) !important;
+}
+
+.socialImage:active, {
+  filter: brightness(50%) !important;
+}
+
+.socialImage:hover:after {
+  content: url(../IMG/cndaokvdqbqrwcfnswes.png);
+  /* no need for qoutes */
+  display: block;
+  position: absolute;
+  left: 200;
+  top: 40;
+}
+
+.socialImage {
+   transition: filter 0.5s ease;
+   filter: brightness(100%);
 }
 
 .rowNews {
