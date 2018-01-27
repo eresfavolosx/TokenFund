@@ -1272,6 +1272,7 @@ body.modal-open {
   font-weight: 300;
   text-align: left;
       margin-bottom: 12px;
+          line-height: 30px;
 }
 
 .paragraphFAQ {
