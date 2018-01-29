@@ -111,11 +111,35 @@ var finalFunds = {};
     $("#CADData").html(data.CAD.symbol + Number(Math.round(total + 'e2') + 'e-2') + currency + " out of " + data.CAD.symbol + Number(Math.round(data.CAD.last*finalFunds + 'e2') + 'e-2') + " CAD");
     // document.getElementById("walletData").value = data.final_balance;
   }
-
-  document.querySelector('#p3').addEventListener('mdl-componentupgraded', function() {
-    this.MaterialProgress.setProgress(1);
-    this.MaterialProgress.setBuffer(90);
-  });
+// 
+//   document.querySelector('#p3').addEventListener('mdl-componentupgraded', function() {
+//     this.MaterialProgress.setProgress(1);
+//     this.MaterialProgress.setBuffer(90);
+//   });
+//
+//   $('.partners').owlCarousel({
+//   loop: true, margin: 10,
+//   autoplay: true,
+//   autoplayHoverPause: true,
+//   responsiveClass: true,
+//   responsive: {
+//     0: {
+//       items: 1,
+//       nav: true,
+//       loop: true
+//     },
+//     800: {
+//       items: 3,
+//       nav: true,
+//       loop: true
+//     },
+//     1200: {
+//       items: 4,
+//       nav: true,
+//       loop: true
+//     }
+//   }
+// })
 
 
 
