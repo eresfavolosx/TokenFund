@@ -934,7 +934,7 @@ footer p {
   color: white;
   margin-top: 40px;
   font-style: italic;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 .textAlign {
@@ -1428,4 +1428,8 @@ a:focus, a:hover {
 .partnerLogo {
   height: auto;
   width: auto;
+}
+
+.containerBodyQuestions {
+  max-width: 1000px !important;
 }
