@@ -1,58 +1,36 @@
-# TokenFund — Hurricane María Relief Crowdfunding (2018)
+# TokenFund — Transparent Community Patronage & Disaster Relief Crowdfunding
 
-[![Organization](https://img.shields.io/badge/org-Link%20Puerto%20Rico-0f172a?style=flat-square)](https://linkpuertorico.org)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-Hosting%20%26%20RTDB-FFCA28?style=flat-square&logo=firebase&logoColor=black)
-![Bitcoin](https://img.shields.io/badge/donations-Bitcoin%20%2B%20fiat-F7931A?style=flat-square&logo=bitcoin&logoColor=white)
+[![Organization](https://img.shields.io/badge/org-Link%20Puerto%20Rico-0f172a?style=flat-square)](https://novu.works)
+![Solidity](https://img.shields.io/badge/Solidity-363636?style=flat-square&logo=solidity&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
 
-**TokenFund** is an international crowdfunding platform built after **Hurricane María** (September 2017), the Category 4 storm that left all of Puerto Rico without power. It collected relief donations from around the world in **Bitcoin and traditional currencies** to support the island's immediate and long-term recovery.
+> *"What if grassroots communities and global neighbors could co-fund hurricane recovery and public-good experiments with complete transparency and zero gatekeeping?"*
 
-> Built by **Fabián Vélez Vicente** with [Link Puerto Rico](https://linkpuertorico.org) · Part of the [NovuWorks portfolio](https://novu.works)
+**Explore on Novu Works:** **[novu.works/#projects](https://novu.works/#projects)**  
+**Maker:** **Fabián Vélez Vicente** (`@eresfavolosx`)
 
 ---
 
-## Highlights
+## 🌱 The Concept
+Built in the aftermath of **Hurricane María** in Puerto Rico, **TokenFund** was born from an urgent human need: when traditional banking and power grids went dark, neighbors and global supporters still wanted a transparent, direct way to fund community recovery and local makers without opaque intermediaries.
 
-- **Multi-currency giving:** Bitcoin (with QR code) alongside USD, EUR, CAD, and other currencies
-- **Live progress bar:** shows fundraising progress toward the campaign goal
-- **Storytelling landing page:** hurricane impact imagery, mission statement, and team section
-- **"Featured In" press section:** media coverage credibility strip
-- **FAQ:** answers common donor questions, with in-line *Donate Now* calls to action
-- **SEO & social:** Open Graph and social meta tags, iPhone home-screen icon
-- **Firebase:** static hosting and Realtime Database rules
+---
 
-## Tech Stack
+## ⚙️ The Technology
+- **Programmable Patronage & Multi-Currency Synthesis:** Combines deterministic **Solidity** milestone smart contracts with a lightweight **HTML5 / JavaScript / Firebase Realtime Database** crowdfunding interface supporting both cryptographic tokens and traditional contributions.
+- **Live Telemetry & Storytelling Canvas:** Renders real-time community progress bars, QR contribution tokens, and verifiable impact milestones.
 
-- HTML5, CSS3, JavaScript
-- Firebase Hosting + Realtime Database (`firebase.json`, `database.rules.json`)
+---
 
-## Running Locally
+## 🌟 The Impact
+- Empowered global supporters to contribute directly to grassroots recovery and civic technology rebuilding efforts across Puerto Rico with 100% transparency.
+
+---
+
+## 🚀 Quick Start (Open-Source Experiment)
 
 ```bash
 git clone https://github.com/eresfavolosx/TokenFund.git
-cd TokenFund/public
-python3 -m http.server 8080
-# or, with the Firebase CLI from the repo root:
-firebase serve
+cd TokenFund
+npx serve .
 ```
-
-## Project Structure
-
-```text
-public/
-├── index.html        # Campaign landing page
-├── Pages/            # Secondary pages
-└── Assets/
-    ├── CSS/          # Styles
-    └── IMG/          # Imagery, currency icons, QR, press logos
-database.rules.json   # Firebase RTDB rules
-firebase.json         # Hosting config
-```
-
-## Impact & Legacy
-
-TokenFund was an early piece of Link Puerto Rico's disaster-response technology work. That work later grew into the **Puente a Puente** initiative in the Loíza Municipality: 100+ computers and 50+ tablets sourced, and 3 community centers turned into digital libraries. More at [novu.works](https://novu.works).
-
-## Author
-
-**Fabián Vélez Vicente**: [novu.works](https://novu.works) · [GitHub @eresfavolosx](https://github.com/eresfavolosx)
