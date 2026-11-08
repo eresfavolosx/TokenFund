@@ -1,146 +1,79 @@
-
-$(document).ready(function() {
-
-  var finalValueOfficial = {};
-      $.ajax({
-          url: "https://api.blockcypher.com/v1/btc/main/addrs/1PsA7MX1jDYcTqRTJusLrC4Cds8y5bmWJJ/full?limit=50?format=json",
-          async: false,
-          dataType: 'json',
-          success: function(data) {
-              preFinalValue = data.final_balance;
-              preFinalValue /= Math.pow(10, 8);
-              finalValueOfficial = preFinalValue;
-          }
-      });
-var finalFunds = {};
-      $.ajax({
-          url: "https://blockchain.info/ticker?format=json",
-          async: false,
-          dataType: 'json',
-          success: function(data2) {
-            finalValue1 = data2.USD.last;
-              finalFunds = 100000 / parseFloat(finalValue1);
-              finalFunds = Number(Math.round(finalFunds + 'e2') + 'e-2')
-          }
-      });
-
-
-  function close() {
-    var d = document.querySelector('.mdl-layout');
-    d.MaterialLayout.toggleDrawer();
+$(document).ready(function () {
+  var GOAL_USD = 100000;
+  var DEFAULT_RATES = {
+    USD: { last: 68500, symbol: '$' },
+    EUR: { last: 63200, symbol: '€' },
+    JPY: { last: 10450000, symbol: '¥' },
+    GBP: { last: 54100, symbol: '£' },
+    CHF: { last: 60200, symbol: 'CHF ' },
+    CAD: { last: 94800, symbol: 'CA$' }
   };
 
-  // $.getJSON("https://blockchain.info/ticker?format=json", gotData8);
-  //
-  // function gotData8(data) {
-  //   finalValue = data.USD.last;
-  //   finalFunds = 100000 / parseFloat(finalValue);
-  //   window.finalFunds = Number(Math.round(finalFunds + 'e2') + 'e-2')
-  // }
-
-  $.getJSON("https://api.blockcypher.com/v1/btc/main/addrs/1PsA7MX1jDYcTqRTJusLrC4Cds8y5bmWJJ/full?limit=50?format=json", gotData);
-
-  function gotData(data, finalValueOfficial) {
-    window.finalValueBTC = data.final_balance;
-    currency = " BTC";
-    finalValueBTC /= Math.pow(10, 8);
-    $("#walletData").html(finalValueBTC + currency + " out of " + finalFunds + " BTC");
-    finalValueOfficial = parseFloat(finalValueBTC);
+  function round2(val) {
+    var num = Number(val);
+    if (!Number.isFinite(num)) return '0.00';
+    return (Math.round(num * 100) / 100).toFixed(2);
   }
 
-  $.getJSON("https://blockchain.info/ticker?format=json", gotData2);
+  function renderTelemetry(balanceBtc, rates) {
+    var safeBtc = Number.isFinite(balanceBtc) && balanceBtc >= 0 ? balanceBtc : 0;
+    var activeRates = rates && rates.USD && Number.isFinite(Number(rates.USD.last)) ? rates : DEFAULT_RATES;
+    var usdRate = Number(activeRates.USD.last) || DEFAULT_RATES.USD.last;
+    var goalBtc = Number(round2(GOAL_USD / usdRate));
 
-  function gotData2(data) {
-    finalValue = data.USD.last;
-    currency = " USD";
-    total = (finalValueOfficial * parseFloat(finalValue));
-    $("#USDData").html(data.USD.symbol + Number(Math.round(total + 'e2') + 'e-2') + currency + " out of " + data.USD.symbol + "100000.00 USD");
-    // document.getElementById("walletData").value = data.final_balance;
+    $('#walletData').text(safeBtc.toFixed(4) + ' BTC out of ' + goalBtc.toFixed(2) + ' BTC');
 
-    // Number(Math.round(total + 'e2') + 'e-2')
-    // document.getElementById("walletData").value = data.final_balance;
+    var currencies = ['USD', 'EUR', 'JPY', 'GBP', 'CHF', 'CAD'];
+    currencies.forEach(function (code) {
+      var entry = activeRates[code] || DEFAULT_RATES[code];
+      var rate = Number(entry.last) || DEFAULT_RATES[code].last;
+      var symbol = entry.symbol || '';
+      var raised = round2(safeBtc * rate);
+      var target = code === 'USD' ? '100000.00' : round2(goalBtc * rate);
+      $('#' + code + 'Data').text(symbol + raised + ' ' + code + ' out of ' + symbol + target + ' ' + code);
+    });
   }
 
-  $.getJSON("https://blockchain.info/ticker?format=json", gotData3);
+  // Render immediate baseline so UI never hangs on "Loading Data..."
+  renderTelemetry(0, DEFAULT_RATES);
 
-  function gotData3(data) {
-    finalValue = data.EUR.last;
-    currency = " EUR";
-    total = (finalValueOfficial * finalValue);
-    $("#EURData").html(data.EUR.symbol + Number(Math.round(total + 'e2') + 'e-2') + currency + " out of " + data.EUR.symbol + Number(Math.round(data.EUR.last*finalFunds + 'e2') + 'e-2') + " EUR");
-    // document.getElementById("walletData").value = data.final_balance;
-  }
+  // Fetch live BTC address balance and currency ticker asynchronously without blocking the main thread
+  var balancePromise = $.ajax({
+    url: 'https://api.blockcypher.com/v1/btc/main/addrs/1PsA7MX1jDYcTqRTJusLrC4Cds8y5bmWJJ/balance',
+    dataType: 'json',
+    timeout: 6000
+  }).then(
+    function (data) {
+      var raw = data && typeof data.final_balance === 'number' ? data.final_balance : 0;
+      return raw / Math.pow(10, 8);
+    },
+    function () {
+      return 0;
+    }
+  );
 
-  $.getJSON("https://blockchain.info/ticker?format=json", gotData4);
+  var tickerPromise = $.ajax({
+    url: 'https://blockchain.info/ticker?cors=true',
+    dataType: 'json',
+    timeout: 6000
+  }).then(
+    function (data) {
+      return data || DEFAULT_RATES;
+    },
+    function () {
+      return DEFAULT_RATES;
+    }
+  );
 
-  function gotData4(data) {
-    finalValue = data.JPY.last;
-    currency = " JPY";
-    total = (finalValueOfficial * finalValue);
-    $("#JPYData").html(data.JPY.symbol + Number(Math.round(total + 'e2') + 'e-2') + currency + " out of " + data.JPY.symbol + Number(Math.round(data.JPY.last*finalFunds + 'e2') + 'e-2') + " JPY");
-    // document.getElementById("walletData").value = data.final_balance;
-  }
-
-  $.getJSON("https://blockchain.info/ticker?format=json", gotData5);
-
-  function gotData5(data) {
-    finalValue = data.GBP.last;
-    currency = " GBP";
-    total = (finalValueOfficial * finalValue);
-    $("#GBPData").html(data.GBP.symbol + Number(Math.round(total + 'e2') + 'e-2') + currency + " out of " + data.GBP.symbol + Number(Math.round(data.GBP.last*finalFunds + 'e2') + 'e-2') + " GBP");
-    // document.getElementById("walletData").value = data.final_balance;
-  }
-
-  $.getJSON("https://blockchain.info/ticker?format=json", gotData6);
-
-  function gotData6(data) {
-    finalValue = data.CHF.last;
-    currency = " CHF";
-    total = (finalValueOfficial * finalValue);
-  $("#CHFData").html(data.CHF.symbol + Number(Math.round(total + 'e2') + 'e-2') + currency + " out of " + data.CHF.symbol + Number(Math.round(data.CHF.last*finalFunds + 'e2') + 'e-2') + " CHF");
-    // document.getElementById("walletData").value = data.final_balance;
-
-  }
-
-  $.getJSON("https://blockchain.info/ticker?format=json", gotData7);
-
-  function gotData7(data) {
-    finalValue = data.CAD.last;
-    currency = " CAD";
-    total = (finalValueOfficial * finalValue);
-    $("#CADData").html(data.CAD.symbol + Number(Math.round(total + 'e2') + 'e-2') + currency + " out of " + data.CAD.symbol + Number(Math.round(data.CAD.last*finalFunds + 'e2') + 'e-2') + " CAD");
-    // document.getElementById("walletData").value = data.final_balance;
-  }
-
-  document.querySelector('#p3').addEventListener('mdl-componentupgraded', function() {
-    this.MaterialProgress.setProgress(1);
-    this.MaterialProgress.setBuffer(90);
+  $.when(balancePromise, tickerPromise).done(function (balanceBtc, rates) {
+    renderTelemetry(balanceBtc, rates);
   });
-//
-//   $('.partners').owlCarousel({
-//   loop: true, margin: 10,
-//   autoplay: true,
-//   autoplayHoverPause: true,
-//   responsiveClass: true,
-//   responsive: {
-//     0: {
-//       items: 1,
-//       nav: true,
-//       loop: true
-//     },
-//     800: {
-//       items: 3,
-//       nav: true,
-//       loop: true
-//     },
-//     1200: {
-//       items: 4,
-//       nav: true,
-//       loop: true
-//     }
-//   }
-// })
 
-
-
+  var progressEl = document.querySelector('#p3');
+  if (progressEl) {
+    progressEl.addEventListener('mdl-componentupgraded', function () {
+      this.MaterialProgress.setProgress(1);
+      this.MaterialProgress.setBuffer(90);
+    });
+  }
 });
