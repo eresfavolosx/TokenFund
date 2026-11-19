@@ -15,6 +15,23 @@ $(document).ready(function () {
     return (Math.round(num * 100) / 100).toFixed(2);
   }
 
+  var progressEl = document.querySelector('#p3');
+  var currentProgressPct = 0;
+
+  function updateProgressBar(pct) {
+    currentProgressPct = Math.min(100, Math.max(0, Number(pct) || 0));
+    if (progressEl && progressEl.MaterialProgress) {
+      progressEl.MaterialProgress.setProgress(currentProgressPct);
+      progressEl.MaterialProgress.setBuffer(100);
+    }
+  }
+
+  if (progressEl) {
+    progressEl.addEventListener('mdl-componentupgraded', function () {
+      updateProgressBar(currentProgressPct);
+    });
+  }
+
   function renderTelemetry(balanceBtc, rates) {
     var safeBtc = Number.isFinite(balanceBtc) && balanceBtc >= 0 ? balanceBtc : 0;
     var activeRates = rates && rates.USD && Number.isFinite(Number(rates.USD.last)) ? rates : DEFAULT_RATES;
@@ -22,6 +39,7 @@ $(document).ready(function () {
     var goalBtc = Number(round2(GOAL_USD / usdRate));
 
     $('#walletData').text(safeBtc.toFixed(4) + ' BTC out of ' + goalBtc.toFixed(2) + ' BTC');
+    updateProgressBar(((safeBtc * usdRate) / GOAL_USD) * 100);
 
     var currencies = ['USD', 'EUR', 'JPY', 'GBP', 'CHF', 'CAD'];
     currencies.forEach(function (code) {
@@ -68,12 +86,4 @@ $(document).ready(function () {
   $.when(balancePromise, tickerPromise).done(function (balanceBtc, rates) {
     renderTelemetry(balanceBtc, rates);
   });
-
-  var progressEl = document.querySelector('#p3');
-  if (progressEl) {
-    progressEl.addEventListener('mdl-componentupgraded', function () {
-      this.MaterialProgress.setProgress(1);
-      this.MaterialProgress.setBuffer(90);
-    });
-  }
 });
